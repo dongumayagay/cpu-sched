@@ -1,0 +1,86 @@
+pag hiwa hiwalayin yung input datas at tyaka mga calculated values
+
+para mabawasan yung iniistore na datas at mas madali i handle at i compute
+
+
+bali itataas ko gantt chart then ibaba ko yung table para pagdinamihan lagay ng rows
+
+limit 10 process hahanap din ako kulay para dun
+
+///
+Formula
+
+Turnaround time = Exit time - Arrival time
+Waiting time = Turnaround time - Burst time
+
+///
+data struc
+
+array for holding inputs( arrival time and burst time)
+
+array for handling queue dipende sa algorithm na ginamit kung ano mauuna or mahahati
+
+print result
+///
+
+
+
+///
+algorithms
+
+non preemptive
+fcfs
+sort by arrival time
+
+sjf non preemptive
+sort by burst time
+
+/// bali kailangan ko magkaron ng tick at every tick icocompare ko sa mga arrival or burst time para tingnan kung ano na dapat yung next process
+
+like
+time 0
+
+sa queue ano ano yung processes in time 0 
+
+every tick titingnan kung may process sa queue na ang arrival time ay mas mababa or equal sa tick( ibig sabihin nag arrive na sya at nag aantay sa queue)
+at yung mga nag aantay dun titingnan kung ano sa kanila yung pinakamababa na burst time
+
+
+first step check lahat ng may arrival time na 0
+
+
+///
+
+ sa fcfs kung sino mauna na process sya na una at yung mga susunod is susunod pag tapos nung bago sya so sunod sunod lang
+
+///
+
+may processes
+may queue
+may oras
+
+sa umpisa sa time 0
+ilagay sa queue lahat ng may arrival time na 0
+
+then kada tick ng oras ichecheck kung may bagong nag arrive na process
+kung meron ilagay sa queue
+
+kung non preemptive edi ilagay lang sa queue at hayaan matapos bago magstart ng bago at pumili sa queue 
+
+kung preemptive
+
+edi kada tick tingnan mo kung baka may mas maiksi sa kanya na nasa queue yun muna unahin ibalik sa queue  yung current process bawasan mo nalang kung ilan na naprocess
+
+
+fcfs sort by arrival time
+sjf sort by burst then arrival time
+
+strf
+
+///
+kailangan ko padin ng tick para icheck kyng meron or walang nag prprocess in a given time
+
+pinag kaiba sa lang sa preemptive yung tick sa non ay pagtapos ng kada process bali dun lang ako magchecheck pero yung pagmay process pag wala tick every 1 ms
+
+pag walang process (idle cpu) at wala din nasa queue
+pero meron pang natitirang process bali tick every 1 ms
